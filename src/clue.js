@@ -135,12 +135,17 @@ function pickMystery() {
     room: selectRandom(roomsArray),
     weapon: selectRandom(weaponsArray)
   }
-  console.log(mystery);
+  // console.log(mystery);
   return mystery;
 }
-console.log(pickMystery());
+// console.log(pickMystery());
 
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+  return (`${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`)
+}
+
+let envelope = pickMystery();
+console.log(revealMystery(envelope));
