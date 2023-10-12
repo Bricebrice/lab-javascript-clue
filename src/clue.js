@@ -110,19 +110,27 @@ const weaponsArray = [
 // };
 // console.log(randomNumber(10));
 
-const randomNumber = max => {
-  return Math.floor(Math.random() * max);
-};
+// Longer solution:
+// const randomNumber = max => {
+//   return Math.floor(Math.random() * max);
+// };
 // console.log(randomNumber(3));
 
+// function selectRandom(array) {
+//   // console.log(array.length);
+//   return array[randomNumber(array.length)];
+// }
+
+// Can be improved as:
 function selectRandom(array) {
-  // console.log(array.length);
-  return array[randomNumber(array.length)];
+  return array[Math.floor(Math.random() * array.length)];
 }
 console.log(selectRandom(weaponsArray));
 
 
-function pickMystery() {}
+// function pickMystery() {
+//   const 
+// }
 
 // ITERATION 3
 
