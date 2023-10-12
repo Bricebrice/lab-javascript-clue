@@ -11,7 +11,7 @@ const suspectsArray = [
     description: "He has a lot of connections",
     image:
       "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
-    color: green,
+    color: "green",
   },
   {
     firstName: "Doctor",
@@ -20,7 +20,7 @@ const suspectsArray = [
     age: 26,
     description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
     image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
-    color: white,
+    color: "white",
   },
 
   {
@@ -71,21 +71,21 @@ const suspectsArray = [
 // Rooms Array
 
 const roomsArray = [
-  { name: 'Dining Room' },
-  { name: 'Conservatory' },
-  { name: 'Kitchen' },
-  { name: 'Study' },
-  { name: 'Library' },
-  { name: 'Billiard Room' },
-  { name: 'Lounge' },
-  { name: 'Ballroom' },
-  { name: 'Hall' },
-  { name: 'Spa' },
-  { name: 'Living Room' },
-  { name: 'Observatory' },
-  { name: 'Theater' },
-  { name: 'Guest House' },
-  { name: 'Patio' }
+  { name: "Dining Room" },
+  { name: "Conservatory" },
+  { name: "Kitchen" },
+  { name: "Study" },
+  { name: "Library" },
+  { name: "Billiard Room" },
+  { name: "Lounge" },
+  { name: "Ballroom" },
+  { name: "Hall" },
+  { name: "Spa" },
+  { name: "Living Room" },
+  { name: "Observatory" },
+  { name: "Theater" },
+  { name: "Guest House" },
+  { name: "Patio" },
 ];
 
 // Weapons Array
@@ -104,7 +104,23 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+// Below: not working when only one value as argument. ++ We don't need min finally.
+// const randomNumber = function (min, max){
+//   return Math.floor(Math.random() * (max-min +1)) + min;
+// };
+// console.log(randomNumber(10));
+
+const randomNumber = max => {
+  return Math.floor(Math.random() * max);
+};
+// console.log(randomNumber(3));
+
+function selectRandom(array) {
+  // console.log(array.length);
+  return array[randomNumber(array.length)];
+}
+console.log(selectRandom(weaponsArray));
+
 
 function pickMystery() {}
 
